@@ -1,6 +1,7 @@
 #include <iostream>
 #include "ClassClientes.h"
-
+#include "ClassVendedores.h"
+#include "ClassAuto.h"
 using namespace std;
 
 int main(){
