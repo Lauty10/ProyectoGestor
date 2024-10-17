@@ -56,6 +56,7 @@ public:
     const char* getRolCliente(){
     return rol;
     }
+    ~Clientes(){};
 };
 
 #endif // CLASSCLIENTES_H_INCLUDED
