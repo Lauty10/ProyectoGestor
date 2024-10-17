@@ -2,3 +2,18 @@
 1729115895 source:c:\users\lauty\onedrive\escritorio\sistemadegestionconcesionaria\main.cpp
 	<iostream>
 
+1729168393 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\main.cpp
+	<iostream>
+	"ClassClientes.h"
+	"ClassVendedores.h"
+	"ClassAuto.h"
+
+1729168055 c:\users\estudiante\onedrive\escritorio\proyectogestor\classclientes.h
+	<string.h>
+
+1729168055 c:\users\estudiante\onedrive\escritorio\proyectogestor\classvendedores.h
+	<string.h>
+
+1729171158 c:\users\estudiante\onedrive\escritorio\proyectogestor\classauto.h
+	<string.h>
+

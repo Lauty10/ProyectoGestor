@@ -1,5 +1,7 @@
 #ifndef CLASSAUTO_H_INCLUDED
 #define CLASSAUTO_H_INCLUDED
+#include <string.h>
+
 class Auto{
 private:
 int idDeAuto;
