@@ -1,0 +1,8 @@
+# depslib dependency file v1.0
+1729198233 source:c:\users\lauty\onedrive\escritorio\sistemadegestionconcesionaria\main.cpp
+	<iostream>
+	"ClassAuto.h"
+
+1729198688 c:\users\lauty\onedrive\escritorio\sistemadegestionconcesionaria\classauto.h
+	<string.h>
+
