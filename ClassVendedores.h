@@ -55,7 +55,7 @@ public:
     const char* getRol(){
     return rol;
     }
-
+    ~Vendedores(){};
 };
 
 #endif // CLASSVENDEDORES_H_INCLUDED

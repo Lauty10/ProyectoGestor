@@ -11,7 +11,7 @@ private:
     int anioAuto;
     float precioAuto;
 public:
-    Auto(int id, const char* nombreA, const char* modeloA, const char* marcaA, int anioA, float precioA){
+    Auto(int id=0, const char* nombreA="XXX", const char* modeloA="XXX", const char* marcaA="XXX", int anioA=0, float precioA=0.0){
     this->idDelAuto=id;
     strcpy(this->nombreAuto,nombreA);
     strcpy(this->modeloAuto,modeloA);
@@ -55,6 +55,7 @@ public:
     float getPrecioAuto(){
     return precioAuto;
     }
+    ~Auto();
 };
 
 #endif // CLASSAUTO_H_INCLUDED
