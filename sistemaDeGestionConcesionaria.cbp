@@ -35,6 +35,7 @@
 		<Unit filename="ClassAuto.h" />
 		<Unit filename="ClassCliente.h" />
 		<Unit filename="ClassClientes.h" />
+		<Unit filename="ClassFecha.h" />
 		<Unit filename="ClassVendedores.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
