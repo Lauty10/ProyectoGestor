@@ -92,7 +92,5 @@ fclose(pCliente);
 }
 
 };
-#endif // ARCHIVOVENDEDORES_H_INCLUDED
-
 
 #endif // ARCHIVOCLIENTES_H_INCLUDED
