@@ -32,6 +32,9 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
+		<Unit filename="ArchivoAutos.h" />
+		<Unit filename="ArchivoClientes.h" />
+		<Unit filename="ArchivoVendedores.h" />
 		<Unit filename="ClassAuto.h" />
 		<Unit filename="ClassCabezeraVenta.h" />
 		<Unit filename="ClassCliente.h" />
