@@ -1,9 +1,9 @@
 #include <iostream>
-#include "ClassFecha.h"
+#include "Funciones.h"
 
 using namespace std;
 
 int main(){
-    cout << "Hello world!" << endl;
-    return 0;
+menu();
+return 0;
 }

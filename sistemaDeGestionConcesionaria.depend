@@ -12,9 +12,9 @@
 
 1729115895 833c6dc3988e5a9a2796238ce6a1452ca982e
 
-1729201074 source:c:\users\lauty\onedrive\escritorio\proyectogestor\main.cpp
+1729452810 source:c:\users\lauty\onedrive\escritorio\proyectogestor\main.cpp
 	<iostream>
-	"ClassFecha.h"
+	"Funciones.h"
 
 1729201074 c:\users\lauty\onedrive\escritorio\proyectogestor\classfecha.h
 
@@ -23,4 +23,20 @@
 	"ClassFecha.h"
 
 1729433210 c:\users\estudiante\onedrive\escritorio\proyectogestor\classfecha.h
+
+1729449486 c:\users\lauty\onedrive\escritorio\proyectogestor\funcionalidades.cpp
+	<iostream>
+
+1729449946 source:c:\users\lauty\onedrive\escritorio\proyectogestor\funcionalidades.cpp
+	<iostream>
+
+1729452215 source:c:\users\lauty\onedrive\escritorio\proyectogestor\funcionesgestoras.cpp
+	<iostream>
+	"ClassVendedores.h"
+	"Funciones.h"
+
+1729452810 c:\users\lauty\onedrive\escritorio\proyectogestor\funciones.h
+
+1729201074 c:\users\lauty\onedrive\escritorio\proyectogestor\classvendedores.h
+	<string.h>
 
