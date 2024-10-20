@@ -38,6 +38,7 @@
 		<Unit filename="ClassClientes.h" />
 		<Unit filename="ClassFecha.h" />
 		<Unit filename="ClassVendedores.h" />
+		<Unit filename="detalleVenta.h" />
 		<Unit filename="main.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
