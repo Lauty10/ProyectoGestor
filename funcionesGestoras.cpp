@@ -5,6 +5,8 @@
 
 using namespace std;
 
+//MENU
+
 void menu(){
 int opcion;
 while(true){
