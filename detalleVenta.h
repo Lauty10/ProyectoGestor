@@ -47,6 +47,7 @@ public:
     const char* getNombreAuto(){
     return nombreAuto;
     }
+    ~Detalle(){};
 };
 
 #endif // DETALLEVENTA_H_INCLUDED

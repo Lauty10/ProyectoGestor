@@ -5,7 +5,6 @@
 using namespace std;
 
 //MENU
-
 void menu(){
 int opcion;
 while(true){
@@ -17,7 +16,7 @@ cout<<"2-)REGISTRARSE"<<endl;
 cout<<"-------------------------------------------------------------"<<endl;
 cout<<"3-)RECUPERAR CLAVE"<<endl;
 cout<<"-------------------------------------------------------------"<<endl;
-cout<<"SALIR DEL SISTEMA"<<endl;
+cout<<"4-)SALIR DEL SISTEMA"<<endl;
 cout<<"-------------------------------------------------------------"<<endl;
 cout<<"INGRESE LA OPCION QUE DESEE:";
 cin>>opcion;
@@ -40,7 +39,6 @@ default:
 }
 }
 }
-
 //INICIAR SESION
 void iniciarSesion(){
 FILE *registro;
@@ -78,9 +76,11 @@ system("cls");
 }
 fclose(registro);
 system("pause");
+system("cls");
+if(inicio){
+menuVendedores();
 }
-
-
+}
 //REGISTRARSE EN EL SISTEMA
 void registrarse(){
 FILE *registro;
@@ -114,4 +114,51 @@ cout<<"Usuario dado de alta..."<<endl;
 system("pause");
 system("cls");
 fclose(registro);
+}
+
+//MENU VENDEDORES
+void menuVendedores(){
+int opcion;
+while(true){
+cout<<"BIEVENIDO AL SISTEMA DE LA CONSECIONARIA"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"1-)DAR DE ALTA VEHICULO NUEVO"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"2-)REALIZAR VENTA DE VEHICULO"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"3-)DAR DE BAJA CLIENTE DEL SISTEMA"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"4-)LISTAR VEHICULOS DISPONIBLES"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"5-)LISTAR USUARIOS"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"6-)MODIFICAR VEHICULOS"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"7-)MODIFICAR CLIENTES"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"8-)CERRAR SESION"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"ELIGA LA OPCION QUE DESEE:";
+cin>>opcion;
+switch(opcion){
+case 1:
+    break;
+case 2:
+    break;
+case 3:
+    break;
+case 4:
+    break;
+case 5:
+    break;
+case 6:
+    break;
+case 7:
+    break;
+case 8:
+    break;
+default:
+    cout<<"La opcion elegida no es correcta"<<endl;
+}
+}
 }
