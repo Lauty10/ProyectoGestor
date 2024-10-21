@@ -2,6 +2,8 @@
 #define CLASSAUTO_H_INCLUDED
 #include <string.h>
 
+using namespace std;
+
 class Auto{
 private:
     int idDelAuto;
@@ -55,7 +57,42 @@ public:
     float getPrecioAuto(){
     return precioAuto;
     }
-    ~Auto();
+};
+
+class Alta{
+public:
+ void NuevoAuto(){
+ FILE *vehiculo;
+ vehiculo=fopen("C:\\Users\\Lauty\\OneDrive\\Escritorio\\ProyectoGestor\\vehiculos.dat","ab");
+ if(vehiculo==NULL){
+    cout<<"Error al intentar cargar vehiculo"<<endl;
+ }
+  Auto nuevoVehiculo;
+  int idDelAuto;
+  char nombreAuto[20];
+  char modeloAuto[20];
+  char marcaAuto[20];
+  int anioAuto;
+  float precioAuto;
+  cout<<"Ingrese el ID del auto:";
+  cin>>idDelAuto;
+  cout<<"Ingrese el nombre del auto:";
+  cin.ignore();
+  cin.getline(nombreAuto,20,'\n');
+  cout<<"Ingrese el modelo del auto:";
+  cin.ignore();
+  cin.getline(modeloAuto,20,'\n');
+  cout<<"Ingrese la marca del auto:";
+  cin.ignore();
+  cin.getline(marcaAuto,20,'\n');
+  cout<<"Ingrese el anio de fabricacion del auto:";
+  cin>>anioAuto;
+  cout<<"Ingrese el precio del auto:";
+  cin>>precioAuto;
+  fwrite(&nuevoVehiculo,sizeof(Auto),1,vehiculo);
+  cout<<"Vehiculo cargado....";
+  fclose(vehiculo);
+ }
 };
 
 #endif // CLASSAUTO_H_INCLUDED

@@ -12,7 +12,7 @@
 
 1729115895 833c6dc3988e5a9a2796238ce6a1452ca982e
 
-1729452954 source:c:\users\lauty\onedrive\escritorio\proyectogestor\main.cpp
+1729547150 source:c:\users\lauty\onedrive\escritorio\proyectogestor\main.cpp
 	<iostream>
 	"Funciones.h"
 
@@ -30,15 +30,19 @@
 1729449946 source:c:\users\lauty\onedrive\escritorio\proyectogestor\funcionalidades.cpp
 	<iostream>
 
-1729545216 source:c:\users\lauty\onedrive\escritorio\proyectogestor\funcionesgestoras.cpp
+1729549049 source:c:\users\lauty\onedrive\escritorio\proyectogestor\funcionesgestoras.cpp
 	<iostream>
 	"ClassVendedores.h"
 	"Funciones.h"
 
-1729545346 c:\users\lauty\onedrive\escritorio\proyectogestor\funciones.h
+1729547967 c:\users\lauty\onedrive\escritorio\proyectogestor\funciones.h
+	"ClassAuto.h"
 
 1729201074 c:\users\lauty\onedrive\escritorio\proyectogestor\classvendedores.h
 	<string.h>
 
 1729474764 c:\users\estudiante\onedrive\escritorio\proyectogestor\funciones.h
+
+1729549378 c:\users\lauty\onedrive\escritorio\proyectogestor\classauto.h
+	<string.h>
 

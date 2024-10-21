@@ -142,6 +142,9 @@ cout<<"ELIGA LA OPCION QUE DESEE:";
 cin>>opcion;
 switch(opcion){
 case 1:
+    system("cls");
+    Alta obj;
+    obj.NuevoAuto();
     break;
 case 2:
     break;
