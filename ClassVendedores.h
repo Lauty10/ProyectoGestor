@@ -2,6 +2,8 @@
 #define CLASSVENDEDORES_H_INCLUDED
 #include <string.h>
 
+using namespace std;
+
 class Vendedores{
 private:
     int idVendedor;
@@ -55,7 +57,29 @@ public:
     const char* getRol(){
     return rol;
     }
-    ~Vendedores(){};
 };
 
+class Lista{
+public:
+    void ListarEmpleados(){
+    FILE *empleados;
+    empleados=fopen("registros.dat","rb");
+    if(empleados==NULL){
+        cout<<"Error al intentar listar empleados"<<endl;
+    }
+    Vendedores obj;
+    while(fread(&obj,sizeof(Vendedores),1,empleados)!=0){
+        cout<<"EL ID DEL VENDEDOR ES:"<<obj.getIdVendedor()<<endl;
+        cout<<"EL NOMBRE DEL VENDEDOR ES:"<<obj.getNombre()<<endl;
+        cout<<"EL DNI DEL EMPLEADO ES:"<<obj.getDni()<<endl;
+        cout<<"EL ROL DEL EMPLEADO ES:"<<obj.getRol()<<endl;
+        cout<<"-------------------------------------------------------------------"<<endl;
+    }
+    fclose(empleados);
+    cout<<endl;
+    cout<<"Estos son todos los vendedores..."<<endl;
+    system("pause");
+    system("cls");
+    }
+};
 #endif // CLASSVENDEDORES_H_INCLUDED
