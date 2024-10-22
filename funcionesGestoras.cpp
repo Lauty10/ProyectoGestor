@@ -1,7 +1,8 @@
 #include <iostream>
 #include "ClassVendedores.h"
 #include "Funciones.h"
-
+#include "ClassCabezeraVenta.h"
+#include "detalleVenta.h"
 using namespace std;
 
 //MENU
@@ -147,6 +148,8 @@ case 1:
     obj.NuevoAuto();
     break;
 case 2:
+    system("cls");
+    ventaVehiculo();
     break;
 case 3:
     break;
@@ -164,4 +167,116 @@ default:
     cout<<"La opcion elegida no es correcta"<<endl;
 }
 }
+}
+
+//FUNCION PARA LA VENTA DE VEHICULOS
+
+void ventaVehiculo(){
+cout<<"NUEVA VENTA"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cabezeraVenta();
+detallesVenta();
+}
+
+void cabezeraVenta(){
+FILE *cabecera;
+cabecera=fopen("registros.dat","ab");
+if(cabecera==NULL){
+cout<< "ERROR AL INTENTAR ABRIR EL ARCHIVO DE REGISTROS"<<endl;
+return ;
+}
+Cabezera obj;
+static int numV=0;
+int idV;
+char nombreV[20];
+int dniC;
+char nombreC[20];
+cout<<"DATOS DE LA CABECERA DE VENTA:"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+
+cout<<"Ingrese el id del Vendedor: "<<endl;
+cin>>idV;
+obj.setIdVendedor(idV);
+
+cout<<"Ingrese el nombre del vendedor: "<<endl;
+cin.ignore();
+cin.getline(nombreV,20, '\n');
+obj.setNombreVendedor(nombreV);
+
+cout<<"Ingrese el D.N.I del cliente: "<<endl;
+cin>>dniC;
+obj.setDniCliente(dniC);
+
+cout<<"Ingrese el nombre del cliente: "<<endl;
+cin.ignore();
+cin.getline(nombreC,20, '\n');
+obj.setNombreCliente(nombreC);
+
+cout<<"Numero de venta: "<<numV<<endl;
+obj.setNumVenta(numV++);
+
+
+fwrite(&obj, sizeof(Cabezera), 1, cabecera);
+fclose(cabecera);
+}
+
+
+
+
+void detallesVenta(){
+cout<<"DATOS DE DETALLE DE VENTA:"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+FILE *detalles;
+detalles=fopen("registros.dat","ab");
+if(detalles==NULL){
+cout<< "ERROR AL INTENTAR ABRIR EL ARCHIVO DE REGISTROS"<<endl;
+return ;
+}
+Detalle obj1(0, 0.0f, "", "", "");
+static int idVenta=0;
+char modelo[20];
+char marca[20];
+char nombreA[20];
+float iV;
+
+cout<<"Id venta: "<<idVenta<<endl;
+obj1.setIdVenta(idVenta++);
+
+cout<<"Ingrese el modelo del auto: "<<endl;
+cin.ignore();
+cin.getline(modelo,20, '\n');
+obj1.setModeloAuto(modelo);
+
+cout<<"Ingrese la marca del auto: "<<endl;
+cin.ignore();
+cin.getline(marca,20, '\n');
+obj1.setMarcaAuto(marca);
+
+cout<<"Ingrese el nombre del auto: "<<endl;
+cin.ignore();
+cin.getline(nombreA,20, '\n');
+obj1.setNombreAuto(nombreA);
+
+detalles = fopen("detalles.dat", "rb");
+if (detalles == NULL) {
+cout << "ERROR AL INTENTAR ABRIR EL ARCHIVO DE DETALLES" << endl;
+return;
+}
+while (fread(&obj1, sizeof(Detalle), 1, detalles) != 0){
+if (strcmp(obj1.getModeloAuto(), modelo)==0 &&
+strcmp(obj1.getMarcaAuto(), marca)==0 &&
+strcmp(obj1.getNombreAuto(), nombreA)==0){
+cout << "IMPORTE AUTO: " << obj1.getImporteVenta() << endl;
+}
+}
+fclose(detalles);
+detalles = fopen("detalles.dat", "ab");
+if (detalles == NULL) {
+cout << "ERROR AL INTENTAR ABRIR EL ARCHIVO DE DETALLES" << endl;
+return;
+}
+fwrite(&obj1, sizeof(Detalle), 1, detalles);
+fclose(detalles);
+
+ system("pause");
 }

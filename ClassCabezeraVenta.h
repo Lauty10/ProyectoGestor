@@ -23,7 +23,7 @@ public:
     void setNombreVendedor(char nombreV[20]){
     strcpy(nombreVendedor,nombreV);
     }
-    void setDniCliente(int dnIC){
+    void setDniCliente(int dniC){
     this->dniCliente=dniC;
     }
     void setNombreCliente(char nombreC[20]){

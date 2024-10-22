@@ -33,7 +33,7 @@ public:
     strcpy(nombreAuto,nombreA);
     }
     int getId(){
-    return id;
+    return idVenta;
     }
     float getImporteVenta(){
     return importeVenta;
