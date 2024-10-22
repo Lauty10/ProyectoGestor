@@ -76,23 +76,55 @@ public:
   float precioAuto;
   cout<<"Ingrese el ID del auto:";
   cin>>idDelAuto;
+  nuevoVehiculo.setIdAuto(idDelAuto);
   cout<<"Ingrese el nombre del auto:";
   cin.ignore();
   cin.getline(nombreAuto,20,'\n');
+  nuevoVehiculo.setNombreAuto(nombreAuto);
   cout<<"Ingrese el modelo del auto:";
   cin.ignore();
   cin.getline(modeloAuto,20,'\n');
+  nuevoVehiculo.setModeloAuto(modeloAuto);
   cout<<"Ingrese la marca del auto:";
   cin.ignore();
   cin.getline(marcaAuto,20,'\n');
+  nuevoVehiculo.setMarcaAuto(marcaAuto);
   cout<<"Ingrese el anio de fabricacion del auto:";
   cin>>anioAuto;
+  nuevoVehiculo.setAnio(anioAuto);
   cout<<"Ingrese el precio del auto:";
   cin>>precioAuto;
+  nuevoVehiculo.setPrecioAuto(precioAuto);
   fwrite(&nuevoVehiculo,sizeof(Auto),1,vehiculo);
-  cout<<"Vehiculo cargado....";
+  cout<<"Vehiculo cargado en el sistema"<<endl;
+  system("pause");
+  system("cls");
   fclose(vehiculo);
  }
+};
+
+class AutosList{
+public:
+    void stockAutos(){
+    FILE *listaA;
+    listaA=fopen("vehiculos.dat","rb");
+    if(listaA==NULL){
+        cout<<"Error al intentar listar los vehiculos";
+    }
+    Auto obj;
+    while(fread(&obj,sizeof(Auto),1,listaA)!=0){
+        cout<<"EL ID DEL AUTO ES:"<<obj.getId()<<endl;
+        cout<<"EL NOMBRE DEL AUTO ES:"<<obj.getNombreAuto()<<endl;
+        cout<<"EL MODELO DEL AUTO ES:"<<obj.getModeloAuto()<<endl;
+        cout<<"EL ANIO DE FABRICACION ES:"<<obj.getAnioAuto()<<endl;
+        cout<<"EL PRECIO DEL AUTO ES:"<<obj.getPrecioAuto()<<endl;
+        cout<<"-------------------------------------------------------------------------"<<endl;
+    }
+    fclose(listaA);
+    cout<<"Estos son los autos disponibles actualmente"<<endl;
+    system("pause");
+    system("cls");
+    }
 };
 
 #endif // CLASSAUTO_H_INCLUDED
