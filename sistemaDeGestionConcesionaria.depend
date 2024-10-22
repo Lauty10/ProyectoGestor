@@ -18,7 +18,7 @@
 
 1729201074 c:\users\lauty\onedrive\escritorio\proyectogestor\classfecha.h
 
-1729472299 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\main.cpp
+1729625032 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\main.cpp
 	<iostream>
 	"Funciones.h"
 
@@ -41,8 +41,28 @@
 1729201074 c:\users\lauty\onedrive\escritorio\proyectogestor\classvendedores.h
 	<string.h>
 
-1729474764 c:\users\estudiante\onedrive\escritorio\proyectogestor\funciones.h
+1729625206 c:\users\estudiante\onedrive\escritorio\proyectogestor\funciones.h
+	"ClassAuto.h"
 
 1729549378 c:\users\lauty\onedrive\escritorio\proyectogestor\classauto.h
+	<string.h>
+
+1729625032 c:\users\estudiante\onedrive\escritorio\proyectogestor\classauto.h
+	<string.h>
+
+1729625254 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\funcionesgestoras.cpp
+	<iostream>
+	"ClassVendedores.h"
+	"Funciones.h"
+	"ClassCabezeraVenta.h"
+	"detalleVenta.h"
+
+1729625032 c:\users\estudiante\onedrive\escritorio\proyectogestor\classvendedores.h
+	<string.h>
+
+1729625262 c:\users\estudiante\onedrive\escritorio\proyectogestor\classcabezeraventa.h
+	<string.h>
+
+1729625275 c:\users\estudiante\onedrive\escritorio\proyectogestor\detalleventa.h
 	<string.h>
 
