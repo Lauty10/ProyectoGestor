@@ -8,4 +8,5 @@ void registrarse();
 void menuVendedores();
 void ventaVehiculo();
 void recuperarClave();
+int nuevoId();
 #endif // FUNCIONES_H_INCLUDED

@@ -68,15 +68,14 @@ public:
     cout<<"Error al intentar cargar vehiculo"<<endl;
  }
   Auto nuevoVehiculo;
-  int idDelAuto;
+  int idUnico;
   char nombreAuto[20];
   char modeloAuto[20];
   char marcaAuto[20];
   int anioAuto;
   float precioAuto;
-  cout<<"Ingrese el ID del auto:";
-  cin>>idDelAuto;
-  nuevoVehiculo.setIdAuto(idDelAuto);
+  idUnico=generadorId();
+  nuevoVehiculo.setIdAuto(idUnico);
   cout<<"Ingrese el nombre del auto:";
   cin.ignore();
   cin.getline(nombreAuto,20,'\n');
@@ -101,6 +100,22 @@ public:
   system("cls");
   fclose(vehiculo);
  }
+
+ int generadorId(){
+ int nuevoDato=0;
+ FILE *dato;
+ dato=fopen("vehiculos.dat","rb");
+ if(dato==NULL){
+    cout<<"Error al generar nuevo id";
+ }
+ Auto objId;
+ while(fread(&objId,sizeof(Auto),1,dato)!=0){
+    nuevoDato++;
+ }
+ fclose(dato);
+ return nuevoDato+1;
+ }
+
 };
 
 class AutosList{

@@ -57,6 +57,7 @@ public:
     ~Clientes(){};
 };
 
+//GENERAR ID UNICO COMO LO HICE CON VENDEDORES Y AUTOS. SI EL CLIENTE YA COMPRO Y POR ENDE YA EXISTE (HAY QUE VERIFICARLO)NO VOLVER A CARGARLO EN EL SISTEMA.
 class AltaCliente{
 public:
 void registrarCliente(){
@@ -73,8 +74,7 @@ char nombreC[30];
 int dniC;
 char correoC[35];
 bool rol;
-cout<<"INGRESE LOS DATOS DEL CLIENTE A REGISTRAR:"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+cout<<"INGRESE LOS DATOS DEL CLIENTE A REGISTRAR"<<endl;
 cout<<"Nombre: ";
 cin.ignore();
 cin.getline(nombreC,30,'\n');
@@ -99,7 +99,6 @@ fclose(cliente);
 
 }
 };
-
 
 class BajaCliente{
 public:

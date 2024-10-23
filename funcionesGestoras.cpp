@@ -6,8 +6,6 @@
 #include "ClassClientes.h"
 #include <string>
 
-
-
 //MENU
 void menu(){
 int opcion;
@@ -89,7 +87,7 @@ menuVendedores();
 //REGISTRARSE EN EL SISTEMA
 void registrarse(){
 FILE *registro;
-registro=fopen("C:\\Users\\Lauty\\OneDrive\\Escritorio\\ProyectoGestor\\registros.dat","ab");
+registro=fopen("C:\\Users\\Lauty\\OneDrive\\Escritorio\\ProyectoGestor\\registros.dat","wb");
 if(registro==nullptr){
     cout<<"ERROR AL CREAR UN ARCHIVO DE REGISTROS"<<endl;
 }
@@ -98,6 +96,7 @@ Vendedores obj;
   int dni;
   char correo[35];
   char clave[20];
+  int IdVendedor;
 cout<<"Ingrese su nombre:";
 cin.ignore();
 cin.getline(nombre,30,'\n');
@@ -113,6 +112,8 @@ cout<<"Ingrese su clave:";
 cin.ignore();
 cin.getline(clave,20,'\n');
 obj.setClave(clave);
+IdVendedor=nuevoId();
+obj.setId(IdVendedor);
 fwrite(&obj,sizeof(Vendedores),1,registro);
 system("cls");
 cout<<"Usuario dado de alta..."<<endl;
@@ -130,40 +131,39 @@ cout<<"ERROR AL INTENTAR ABRIR EL ARCHIVO DE REGISTROS"<<endl;
 return;
 }
 Vendedores objC;
-char nombreV[30];
 int dni;
 char correo[30];
 char nuevaClave[30];
 bool encontrado=false;
 cout<<"Ingrese los siguientes datos para recuperar su clave: "<<endl;
 cout<<"-------------------------------------------------------"<<endl;
-cout<<"Nombre: ";
-cin.ignore();
-cin.getline(nombreV,30,'\n');
 cout<<"D.N.I: ";
 cin>>dni;
 cout<<"Correo: ";
 cin.ignore();
 cin.getline(correo,30,'\n');
 while(fread(&objC, sizeof(Vendedores),1,clave)!=0){
-if(strcmp(objC.getNombre(),nombreV)==0&&objC.getDni()==dni&& strcmp(objC.getCorreo(),correo)==0){
-cout<<"Ingrese su nueva Clave: ";
+if(strcmp(objC.getCorreo(),correo)==0 && objC.getDni()==dni){
+cout<<"Ingrese su nueva Clave:";
 cin.ignore();
 cin.getline(nuevaClave,30,'\n');
 objC.setClave(nuevaClave);
-fseek(clave, -sizeof(Vendedores), SEEK_CUR);
+long pos=ftell(clave)-sizeof(Vendedores);
+fseek(clave,pos,SEEK_CUR);
 fwrite(&objC, sizeof(Vendedores), 1, clave);
-cout << "Su nueva clave fue guardada con éxito" << endl;
+cout << "Su nueva clave fue guardada con exito" << endl;
 encontrado=true;
+break;
+
 }
 }
 if(!encontrado){
-cout<<"LOS DATOS INGRESADOS NO ESTAN EN LA BASE DE DATOS"<<endl;}
+cout<<"LOS DATOS INGRESADOS NO ESTAN EN LA BASE DE DATOS"<<endl;
+}
 fclose(clave);
 system("pause");
 system("cls");
 }
-
 
 //MENU VENDEDORES
 void menuVendedores(){
@@ -255,3 +255,20 @@ objD.detallesVenta();
 }
 }
 }
+//FUNCION PARA CREAR ID UNICOS
+int nuevoId(){
+int nuevoIdentificador=0;
+FILE *nuevo;
+nuevo=fopen("registros.dat","rb");
+if(nuevo==NULL){
+    cout<<"Error al crear nuevo ID";
+}
+Vendedores obj;
+while(fread(&obj,sizeof(Vendedores),1,nuevo)!=0){
+    nuevoIdentificador++;
+}
+fclose(nuevo);
+return nuevoIdentificador+1;
+}
+
+
