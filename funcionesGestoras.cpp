@@ -200,6 +200,9 @@ case 2:
     ventaVehiculo();
     break;
 case 3:
+    system("cls");
+    BajaCliente objB;
+    objB.darDeBajaCliente();
     break;
 case 4:
     system("cls");
@@ -238,10 +241,12 @@ cout<<"-------------------------------------------------------"<<endl;
 cin>>opcion;
 switch(opcion){
 case 1:
+    system("cls");
 AltaCliente obj1;
 obj1.registrarCliente();
     break;
 case 2:
+    system("cls");
 VentaC obj;
 obj.cabezeraVenta();
 VentaD objD;
