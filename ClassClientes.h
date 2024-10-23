@@ -1,7 +1,8 @@
 #ifndef CLASSCLIENTES_H_INCLUDED
 #define CLASSCLIENTES_H_INCLUDED
-
 #include <string.h>
+#include <iostream>
+using namespace std;
 
 class Clientes{
 private:
@@ -32,9 +33,6 @@ public:
     void setCorreoCliente(char correoC[35]){
     strcpy(this->correoCliente,correoC);
     }
-    void setClaveCliente(char claveC[25]){
-    char claveCliente[25];
-    }
     void setRol(char rol[4]){
     strcpy(this->rol,rol);
     }
@@ -50,13 +48,53 @@ public:
     const char* getCorreoCliente(){
     return correoCliente;
     }
-    const char* getClaveCliente(){
-    return claveCliente;
-    }
+    //bool getRolCliente(){
+    //return false;
+    //}
     const char* getRolCliente(){
     return rol;
     }
     ~Clientes(){};
+};
+
+class AltaCliente{
+public:
+void registrarCliente(){
+FILE *cliente;
+cliente=fopen("cliente.dat","ab");
+if(cliente==NULL){
+cout<<"Error al intentar dar de alta a un nuevo cliente"<<endl;
+}
+
+Clientes obj;
+int idC=0;
+char nombreC[30];
+int dniC;
+char correoC[35];
+//char rol[4];
+cout<<"INGRESE LOS DATOS DEL CLIENTE A REGISTRAR:"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"Nombre: ";
+cin.ignore();
+cin.getline(nombreC,30,'\n');
+obj.setNombreCliente(nombreC);
+cout<<"D.N.I: ";
+cin>>dniC;
+obj.setDni(dniC);
+cout<<"Correo: ";
+cin.ignore();
+cin.getline(correoC,35,'\n');
+obj.setCorreoCliente(correoC);
+cout<<"ID: "<<idC<<endl;
+obj.setIdCliente(idC++);
+
+fwrite(&obj,sizeof(Clientes),1,cliente);
+cout<<"EL nuevo cliente fue registrado en el sistema "<<endl;
+system("pause");
+system("cls");
+fclose(cliente);
+
+}
 };
 
 #endif // CLASSCLIENTES_H_INCLUDED
