@@ -3,6 +3,7 @@
 #include "Funciones.h"
 #include "ClassCabezeraVenta.h"
 #include "detalleVenta.h"
+#include "ClassClientes.h"
 #include <string>
 
 
@@ -170,6 +171,8 @@ case 6:
 case 7:
     break;
 case 8:
+    system("cls");
+    return menu();
     break;
 default:
     cout<<"La opcion elegida no es correcta"<<endl;
@@ -179,11 +182,26 @@ default:
 
 //FUNCION PARA LA VENTA DE VEHICULOS
 void ventaVehiculo(){
-cout<<"NUEVA VENTA"<<endl;
+int opcion;
+while(true){
+cout<<"VENTAS"<<endl;
 cout<<"-------------------------------------------------------"<<endl;
+cout<<"1)Registrar nuevo cliente"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cout<<"2)Nueva venta"<<endl;
+cout<<"-------------------------------------------------------"<<endl;
+cin>>opcion;
+switch(opcion){
+case 1:
+AltaCliente obj1;
+obj1.registrarCliente();
+    break;
+case 2:
 VentaC obj;
 obj.cabezeraVenta();
-VentaD obj1;
-obj1.detallesVenta();
+VentaD objD;
+objD.detallesVenta();
+    break;
 }
-
+}
+}

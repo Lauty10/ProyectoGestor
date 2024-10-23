@@ -54,12 +54,13 @@
 1729642750 c:\users\estudiante\onedrive\escritorio\proyectogestor\classauto.h
 	<string.h>
 
-1729646611 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\funcionesgestoras.cpp
+1729702527 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\funcionesgestoras.cpp
 	<iostream>
 	"ClassVendedores.h"
 	"Funciones.h"
 	"ClassCabezeraVenta.h"
 	"detalleVenta.h"
+	"ClassClientes.h"
 	<string>
 
 1729642750 c:\users\estudiante\onedrive\escritorio\proyectogestor\classvendedores.h
@@ -79,4 +80,8 @@
 
 1729628219 c:\users\lauty\onedrive\escritorio\proyectogestor\detalleventa.h
 	<string.h>
+
+1729701842 c:\users\estudiante\onedrive\escritorio\proyectogestor\classclientes.h
+	<string.h>
+	<iostream>
 
