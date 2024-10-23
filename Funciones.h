@@ -7,4 +7,5 @@ void iniciarSesion();
 void registrarse();
 void menuVendedores();
 void ventaVehiculo();
+void recuperarClave();
 #endif // FUNCIONES_H_INCLUDED
