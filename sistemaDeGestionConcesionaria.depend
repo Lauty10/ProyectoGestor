@@ -18,11 +18,11 @@
 
 1729201074 c:\users\lauty\onedrive\escritorio\proyectogestor\classfecha.h
 
-1729625032 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\main.cpp
+1729642750 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\main.cpp
 	<iostream>
 	"Funciones.h"
 
-1729433210 c:\users\estudiante\onedrive\escritorio\proyectogestor\classfecha.h
+1729642750 c:\users\estudiante\onedrive\escritorio\proyectogestor\classfecha.h
 
 1729449486 c:\users\lauty\onedrive\escritorio\proyectogestor\funcionalidades.cpp
 	<iostream>
@@ -44,29 +44,34 @@
 1729631624 c:\users\lauty\onedrive\escritorio\proyectogestor\classvendedores.h
 	<string.h>
 
-1729625206 c:\users\estudiante\onedrive\escritorio\proyectogestor\funciones.h
+1729647342 c:\users\estudiante\onedrive\escritorio\proyectogestor\funciones.h
 	"ClassAuto.h"
+	"ClassVendedores.h"
 
 1729632549 c:\users\lauty\onedrive\escritorio\proyectogestor\classauto.h
 	<string.h>
 
-1729625032 c:\users\estudiante\onedrive\escritorio\proyectogestor\classauto.h
+1729642750 c:\users\estudiante\onedrive\escritorio\proyectogestor\classauto.h
 	<string.h>
 
-1729625254 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\funcionesgestoras.cpp
+1729646611 source:c:\users\estudiante\onedrive\escritorio\proyectogestor\funcionesgestoras.cpp
 	<iostream>
 	"ClassVendedores.h"
 	"Funciones.h"
 	"ClassCabezeraVenta.h"
 	"detalleVenta.h"
+	<string>
 
-1729625032 c:\users\estudiante\onedrive\escritorio\proyectogestor\classvendedores.h
+1729642750 c:\users\estudiante\onedrive\escritorio\proyectogestor\classvendedores.h
 	<string.h>
 
-1729625262 c:\users\estudiante\onedrive\escritorio\proyectogestor\classcabezeraventa.h
+1729647342 c:\users\estudiante\onedrive\escritorio\proyectogestor\classcabezeraventa.h
+	<iostream>
 	<string.h>
+	"ClassFecha.h"
 
-1729625275 c:\users\estudiante\onedrive\escritorio\proyectogestor\detalleventa.h
+1729647342 c:\users\estudiante\onedrive\escritorio\proyectogestor\detalleventa.h
+	<iostream>
 	<string.h>
 
 1729628219 c:\users\lauty\onedrive\escritorio\proyectogestor\classcabezeraventa.h
