@@ -67,7 +67,7 @@ cout<<"Error al intentar dar de alta a un nuevo cliente"<<endl;
 }
 
 Clientes obj;
-int idC=0;
+static int idC=0;
 char nombreC[30];
 int dniC;
 char correoC[35];
