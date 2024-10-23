@@ -63,7 +63,7 @@ class Alta{
 public:
  void NuevoAuto(){
  FILE *vehiculo;
- vehiculo=fopen("C:\\Users\\Lauty\\OneDrive\\Escritorio\\ProyectoGestor\\vehiculos.dat","wb");
+ vehiculo=fopen("C:\\Users\\Lauty\\OneDrive\\Escritorio\\ProyectoGestor\\vehiculos.dat","ab");
  if(vehiculo==NULL){
     cout<<"Error al intentar cargar vehiculo"<<endl;
  }
