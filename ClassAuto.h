@@ -81,11 +81,9 @@ public:
   cin.getline(nombreAuto,20,'\n');
   nuevoVehiculo.setNombreAuto(nombreAuto);
   cout<<"Ingrese el modelo del auto:";
-  cin.ignore();
   cin.getline(modeloAuto,20,'\n');
   nuevoVehiculo.setModeloAuto(modeloAuto);
   cout<<"Ingrese la marca del auto:";
-  cin.ignore();
   cin.getline(marcaAuto,20,'\n');
   nuevoVehiculo.setMarcaAuto(marcaAuto);
   cout<<"Ingrese el anio de fabricacion del auto:";
@@ -140,6 +138,58 @@ public:
     system("pause");
     system("cls");
     }
-};
 
+    void realizarCambiosAutos(){
+    FILE *cambios;
+    cambios=fopen("vehiculos.dat","rb+");
+    if(cambios==NULL){
+        cout<<"Error al intentar realizar cambios...";
+    }
+    Auto obj;
+    int autoBuscado;
+    char nombreAuto[20];
+    char modeloAuto[20];
+    char marcaAuto[20];
+    int anioAuto;
+    float precioAuto;
+    cout<<"Ingrese el ID del auto buscado:";
+    cin>>autoBuscado;
+    while(fread(&obj,sizeof(Auto),1,cambios)!=0){
+        if(autoBuscado==obj.getId()){
+        long posicion=ftell(cambios)-sizeof(Auto);
+        cout<<"Ingrese los nuevos datos del vehiculo....."<<endl;
+        cout<<"Ingrese el nombre del vehiculo:";
+        cin.ignore();
+        cin.getline(nombreAuto,20,'\n');
+        obj.setNombreAuto(nombreAuto);
+        cout<<"Ingrese el modelo del auto:";
+        cin.getline(modeloAuto,20,'\n');
+        obj.setModeloAuto(modeloAuto);
+        cout<<"Ingrese la marca del auto:";
+        cin.getline(marcaAuto,20,'\n');
+        obj.setMarcaAuto(marcaAuto);
+        cout<<"Ingrese el anio de fabricacion del auto:";
+        cin>>anioAuto;
+        obj.setAnio(anioAuto);
+        cout<<"Ingrese el precio del auto:";
+        cin>>precioAuto;
+        obj.setPrecioAuto(precioAuto);
+        fseek(cambios,posicion,SEEK_SET);
+        fwrite(&obj,sizeof(Auto),1,cambios);
+        cout<<endl;
+        cout<<"Vehiculo actualizado..."<<endl;
+        system("pause");
+        break;
+        }else{
+        system("cls");
+        cout<<"Id del vehiculo no encontrado en el sistema..."<<endl;
+        system("pause");
+        break;
+        }
+    }
+    fclose(cambios);
+    system("cls");
+    }
+
+};
 #endif // CLASSAUTO_H_INCLUDED
