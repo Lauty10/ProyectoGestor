@@ -243,7 +243,7 @@ case 8:
     return menu();
     break;
 default:
-    cout<<"La opcion elegida no es correcta"<<endl;
+    cout<<"La opcion elegida no es correcta..."<<endl;
 }
 }
 }

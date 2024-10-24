@@ -81,5 +81,8 @@ public:
     system("pause");
     system("cls");
     }
+
+    void ModificarVendedores();
+
 };
 #endif // CLASSVENDEDORES_H_INCLUDED
