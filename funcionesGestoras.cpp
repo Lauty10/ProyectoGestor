@@ -8,20 +8,15 @@
 #include "windows.h"
 
 void LH();
-
 void LH2();
 
 //MENU
 void menu(){
 int opcion;
 while(true){
-
  LH(); cout<<endl;
-
  cout<<"  BIENVENIDO AL SISTEMA GESTOR DE LA CONSESIONARIA"<<endl;
-
  LH();
-
  cout << R"(
                 ______
               //  ||\ \
@@ -42,7 +37,6 @@ cout<<"4-)SALIR DEL SISTEMA"<<endl;
 LH2();cout<<endl;
 cout<<"INGRESE LA OPCION QUE DESEE:";
 cin>>opcion;
-
 switch(opcion){
 case 1:
     system("cls");
@@ -108,7 +102,7 @@ menuVendedores();
 //REGISTRARSE EN EL SISTEMA
 void registrarse(){
 FILE *registro;
-registro=fopen("C:\\Users\\Lauty\\OneDrive\\Escritorio\\ProyectoGestor\\registros.dat","wb");
+registro=fopen("C:\\Users\\Lauty\\OneDrive\\Escritorio\\ProyectoGestor\\registros.dat","ab");
 if(registro==nullptr){
     cout<<"ERROR AL CREAR UN ARCHIVO DE REGISTROS"<<endl;
 }
@@ -238,6 +232,9 @@ case 5:
     empleados.ListarEmpleados();
     break;
 case 6:
+    system("cls");
+   AutosList objModificar;
+   objModificar.realizarCambiosAutos();
     break;
 case 7:
     break;
@@ -295,33 +292,17 @@ return nuevoIdentificador+1;
 }
 
 void LH(){ /// linea horizontal
-
     int i, tam;
-
     for (i = 0;i < 52;i++ )
-
         cout<<char(196);
-
 }
-
 void LH2(){
-
     int i, tam;
-
     for (i = 0;i < 61;i++ )
-
         cout<<char(196);
-
 }
-
 void LV(){ /// linea vertical
-
     int i, tam;
-
     for (i = 0;i < 1 ;i++ )
-
         cout<<char(179)<<endl;
-
-
-
 }
