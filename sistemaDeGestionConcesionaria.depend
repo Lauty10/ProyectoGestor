@@ -94,3 +94,42 @@
 	<string.h>
 	<iostream>
 
+1729768564 source:c:\users\user\proyectogestor\funcionesgestoras.cpp
+	<iostream>
+	"ClassVendedores.h"
+	"Funciones.h"
+	"ClassCabezeraVenta.h"
+	"detalleVenta.h"
+	"ClassClientes.h"
+	<string>
+	"windows.h"
+
+1729732839 c:\users\user\proyectogestor\classvendedores.h
+	<string.h>
+
+1729732839 c:\users\user\proyectogestor\funciones.h
+	"ClassAuto.h"
+	"ClassVendedores.h"
+
+1729732839 c:\users\user\proyectogestor\classauto.h
+	<string.h>
+
+1729732839 c:\users\user\proyectogestor\classcabezeraventa.h
+	<iostream>
+	<string.h>
+	"ClassFecha.h"
+
+1729732839 c:\users\user\proyectogestor\classfecha.h
+
+1729732839 c:\users\user\proyectogestor\detalleventa.h
+	<iostream>
+	<string.h>
+
+1729732839 c:\users\user\proyectogestor\classclientes.h
+	<string.h>
+	<iostream>
+
+1729761490 source:c:\users\user\proyectogestor\main.cpp
+	<iostream>
+	"Funciones.h"
+

@@ -5,23 +5,44 @@
 #include "detalleVenta.h"
 #include "ClassClientes.h"
 #include <string>
+#include "windows.h"
+
+void LH();
+
+void LH2();
 
 //MENU
 void menu(){
 int opcion;
 while(true){
-cout<<"BIENVENIDO AL SISTEMA GESTOR DE LA CONSESIONARIA"<<endl;
-cout<<"-------------------------------------------------------------"<<endl;
+
+ LH(); cout<<endl;
+
+ cout<<"  BIENVENIDO AL SISTEMA GESTOR DE LA CONSESIONARIA"<<endl;
+
+ LH();
+
+ cout << R"(
+                ______
+              //  ||\ \
+         ____//___||_\ \___
+         )  _          _    \
+         |_/ \________/ \___|
+        ___\_/________\_/______
+    )"; cout<<endl;
+
+LH2();cout<<endl;
 cout<<"1-)INICIAR SESION"<<endl;
-cout<<"-------------------------------------------------------------"<<endl;
+LH2();cout<<endl;
 cout<<"2-)REGISTRARSE"<<endl;
-cout<<"-------------------------------------------------------------"<<endl;
+LH2();cout<<endl;
 cout<<"3-)RECUPERAR CLAVE"<<endl;
-cout<<"-------------------------------------------------------------"<<endl;
+LH2();cout<<endl;
 cout<<"4-)SALIR DEL SISTEMA"<<endl;
-cout<<"-------------------------------------------------------------"<<endl;
+LH2();cout<<endl;
 cout<<"INGRESE LA OPCION QUE DESEE:";
 cin>>opcion;
+
 switch(opcion){
 case 1:
     system("cls");
@@ -136,7 +157,7 @@ char correo[30];
 char nuevaClave[30];
 bool encontrado=false;
 cout<<"Ingrese los siguientes datos para recuperar su clave: "<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH();cout<<endl;
 cout<<"D.N.I: ";
 cin>>dni;
 cout<<"Correo: ";
@@ -170,26 +191,28 @@ void menuVendedores(){
 int opcion;
 while(true){
 cout<<"BIEVENIDO AL SISTEMA DE LA CONSECIONARIA"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"1-)DAR DE ALTA VEHICULO NUEVO"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"2-)REALIZAR VENTA DE VEHICULO"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"3-)DAR DE BAJA CLIENTE DEL SISTEMA"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"4-)LISTAR VEHICULOS DISPONIBLES"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"5-)LISTAR USUARIOS"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"6-)MODIFICAR VEHICULOS"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"7-)MODIFICAR CLIENTES"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"8-)CERRAR SESION"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"ELIGA LA OPCION QUE DESEE:";
 cin>>opcion;
+
 switch(opcion){
+
 case 1:
     system("cls");
     Alta obj;
@@ -233,11 +256,11 @@ void ventaVehiculo(){
 int opcion;
 while(true){
 cout<<"VENTAS"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"1)Registrar nuevo cliente"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cout<<"2)Nueva venta"<<endl;
-cout<<"-------------------------------------------------------"<<endl;
+LH(); cout<<endl;
 cin>>opcion;
 switch(opcion){
 case 1:
@@ -271,4 +294,34 @@ fclose(nuevo);
 return nuevoIdentificador+1;
 }
 
+void LH(){ /// linea horizontal
 
+    int i, tam;
+
+    for (i = 0;i < 52;i++ )
+
+        cout<<char(196);
+
+}
+
+void LH2(){
+
+    int i, tam;
+
+    for (i = 0;i < 61;i++ )
+
+        cout<<char(196);
+
+}
+
+void LV(){ /// linea vertical
+
+    int i, tam;
+
+    for (i = 0;i < 1 ;i++ )
+
+        cout<<char(179)<<endl;
+
+
+
+}
